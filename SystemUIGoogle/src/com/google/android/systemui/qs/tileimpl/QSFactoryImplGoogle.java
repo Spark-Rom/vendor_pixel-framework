@@ -63,6 +63,7 @@ import com.android.systemui.qs.tiles.ReduceBrightColorsTile;
 import com.android.systemui.qs.tiles.RefreshRateTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenRecordTile;
+import com.android.systemui.qs.tiles.ScreenshotTile;
 import com.android.systemui.qs.tiles.SmartPixelsTile;
 import com.android.systemui.qs.tiles.SoundSearchTile;
 import com.android.systemui.qs.tiles.SoundTile;
@@ -147,7 +148,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<CPUInfoTile> cpuInfoTileProvider,
             Provider<CompassTile> compassTileProvider,
             Provider<SmartPixelsTile> smartPixelsTileProvider,
-            Provider<PreferredNetworkTile> preferredNetworkTileProvider) {
+            Provider<PreferredNetworkTile> preferredNetworkTileProvider,
+            Provider<ScreenshotTile> screenshotTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -201,7 +203,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 soundSearchTileProvider,
                 smartPixelsTileProvider,
                 refreshRateTileProvider,
-                preferredNetworkTileProvider);
+                preferredNetworkTileProvider,
+                screenshotTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
