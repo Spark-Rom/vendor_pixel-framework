@@ -64,6 +64,8 @@ import com.android.systemui.qs.tiles.RefreshRateTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenRecordTile;
 import com.android.systemui.qs.tiles.ScreenshotTile;
+import com.android.systemui.qs.tiles.SparkIdleManagerTile;
+import com.android.systemui.qs.tiles.SparkBoostManagerTile;
 import com.android.systemui.qs.tiles.SmartPixelsTile;
 import com.android.systemui.qs.tiles.SoundSearchTile;
 import com.android.systemui.qs.tiles.SoundTile;
@@ -149,7 +151,9 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<CompassTile> compassTileProvider,
             Provider<SmartPixelsTile> smartPixelsTileProvider,
             Provider<PreferredNetworkTile> preferredNetworkTileProvider,
-            Provider<ScreenshotTile> screenshotTileProvider) {
+            Provider<ScreenshotTile> screenshotTileProvider,
+            Provider<SparkIdleManagerTile> sparkIdleManagerTileProvider,
+            Provider<SparkBoostManagerTile> sparkBoostManagerTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -204,7 +208,9 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 smartPixelsTileProvider,
                 refreshRateTileProvider,
                 preferredNetworkTileProvider,
-                screenshotTileProvider);
+                screenshotTileProvider,
+                sparkIdleManagerTileProvider,
+                sparkBoostManagerTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
