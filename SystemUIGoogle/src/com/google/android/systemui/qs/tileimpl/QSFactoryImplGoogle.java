@@ -39,6 +39,7 @@ import com.android.systemui.qs.tiles.ColorInversionTile;
 import com.android.systemui.qs.tiles.CompassTile;
 import com.android.systemui.qs.tiles.DataSaverTile;
 import com.android.systemui.qs.tiles.DataSwitchTile;
+import com.android.systemui.qs.tiles.DcDimmingTile;
 import com.android.systemui.qs.tiles.DeviceControlsTile;
 import com.android.systemui.qs.tiles.DndTile;
 import com.android.systemui.qs.tiles.DreamTile;
@@ -153,7 +154,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<PreferredNetworkTile> preferredNetworkTileProvider,
             Provider<ScreenshotTile> screenshotTileProvider,
             Provider<SparkIdleManagerTile> sparkIdleManagerTileProvider,
-            Provider<SparkBoostManagerTile> sparkBoostManagerTileProvider) {
+            Provider<SparkBoostManagerTile> sparkBoostManagerTileProvider,
+            Provider<DcDimmingTile> dcDimTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -210,7 +212,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 preferredNetworkTileProvider,
                 screenshotTileProvider,
                 sparkIdleManagerTileProvider,
-                sparkBoostManagerTileProvider);
+                sparkBoostManagerTileProvider,
+                dcDimTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
