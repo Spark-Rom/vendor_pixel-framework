@@ -23,7 +23,7 @@ import android.content.Context;
 import android.hardware.SensorPrivacyManager;
 import android.os.Handler;
 import android.os.PowerManager;
-
+import com.android.systemui.lineage.LineageModule;
 import androidx.annotation.Nullable;
 
 import com.android.internal.logging.UiEventLogger;
@@ -125,7 +125,8 @@ import dagger.Lazy;
         ColumbusModule.class,
         StatusBarEventsModule.class,
         SystemUIGooglePolicyModule.class,
-        RotationLockModule.class
+        RotationLockModule.class,
+        LineageModule.class
 })
 public abstract class SystemUIGoogleModule {
 
