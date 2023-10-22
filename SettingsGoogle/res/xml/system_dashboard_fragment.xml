@@ -5,6 +5,11 @@
     android:key="system_dashboard_screen"
     android:title="@string/header_category_system">
 
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="sys_illustration"
+        settings:lottie_rawRes="@raw/sys_illustration"
+        android:order="-1001" />
+
     <Preference
         android:fragment="com.android.settings.language.LanguageAndInputSettings"
         android:icon="@drawable/ic_settings_language"
